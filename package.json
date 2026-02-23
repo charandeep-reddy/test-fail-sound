@@ -3,7 +3,7 @@
     "displayName": "Test Fail Sound",
     "description": "Plays a sound when npm test fails — never let a failing test go unnoticed!",
     "version": "0.0.1",
-    "publisher": "charan",
+    "publisher": "psydevx",
     "engines": {
         "vscode": "^1.93.0"
     },
