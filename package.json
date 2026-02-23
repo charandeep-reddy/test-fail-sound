@@ -1,0 +1,51 @@
+{
+    "name": "test-fail-sound",
+    "displayName": "Test Fail Sound",
+    "description": "Plays a sound when npm test fails — never let a failing test go unnoticed!",
+    "version": "0.0.1",
+    "publisher": "charan",
+    "engines": {
+        "vscode": "^1.93.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Test Fail Sound",
+            "properties": {
+                "testFailSound.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable or disable the failure sound."
+                },
+                "testFailSound.soundFile": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Absolute path to a custom sound file. Leave empty to use the bundled fahhhhh.mp3."
+                },
+                "testFailSound.volume": {
+                    "type": "number",
+                    "default": 1,
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Playback volume (0 to 1). Only supported on macOS."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.109.0",
+        "typescript": "^5.3.0"
+    }
+}
